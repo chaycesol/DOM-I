@@ -1,3 +1,5 @@
+// console.log("Hello, Chayce!"); // testing to see if JS file is connected to the html file property
+
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -40,3 +42,98 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+//Items in Header
+const navLinks = document.querySelectorAll('a')
+navLinks[0].textContent = 'Services'
+navLinks[1].textContent = 'Product'
+navLinks[2].textContent = 'Vision'
+navLinks[3].textContent = 'Features'
+navLinks[4].textContent = 'About'
+navLinks[5].textContent = 'Contact'
+
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', "img/header-img.png");
+
+
+//Items in CTA Section
+const domHeader = document.querySelector(".cta-text h1")
+// console.log(domHeader);
+domHeader.innerHTML = 'DOM <br> IS <br> AWESOME'
+
+const ctaButtonText= document.querySelector(".cta-text button")
+// console.log(ctaButtonText);
+ctaButtonText.textContent = 'Get Started';
+
+//main content section
+//top content
+const topTextHeaders = document.querySelectorAll(".top-content .text-content h4")
+// console.log(topTextHeaders);
+topTextHeaders[0].textContent = "Features";
+topTextHeaders[1].textContent = "About";
+
+const topTextBlock = document.querySelectorAll(".top-content .text-content p")
+// console.log(topTextBlock);
+topTextBlock[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+topTextBlock[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+
+//middle content
+const midPageImg = document.getElementById("middle-img");
+midPageImg.setAttribute('src', "img/mid-page-accent.jpg");
+
+//bottom content
+const btmTextHeaders = document.querySelectorAll(".bottom-content .text-content h4")
+// console.log(btmTextHeaders);
+btmTextHeaders[0].textContent = "Services";
+btmTextHeaders[1].textContent = "Product";
+btmTextHeaders[2].textContent = "Vision";
+
+const btmTextBlock = document.querySelectorAll(".bottom-content .text-content p")
+// console.log(btmTextBlock);
+btmTextBlock[0].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+btmTextBlock[1].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+btmTextBlock[2].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+//Contact Section
+const contactTitle = document.querySelector('.contact h4')
+// console.log(contactTitle);
+contactTitle.textContent = "Contact";
+
+const contactText = document.querySelectorAll('.contact p')
+// console.log(contactText)
+contactText[0].innerHTML = "123 Way 456 Street <br> Somewhere, USA"  
+contactText[1].textContent = "1 (888) 888-8888"
+contactText[2].textContent = "sales@greatidea.io"
+
+// FOOTER Content
+const footerText = document.querySelector('footer p');
+// console.log(footerText);
+footerText.textContent = "Copyright Great Idea! 2018"
+
+
+//ADD NEW CONTENT
+
+
+
+// adding link using append
+const nav = document.querySelector('header nav')
+const newBlogLink = document.createElement('a')
+// console.log(newBlogLink)
+newBlogLink.textContent = 'Blog'
+newBlogLink.href = "www.medium.com/cheehayce"
+nav.appendChild(newBlogLink);
+
+//adding link using prepend
+const newPrependLink = document.createElement('a')
+console.log(newPrependLink)
+newPrependLink.textContent = 'Home'
+newPrependLink.href= "www.youtube.com"
+nav.prepend(newPrependLink);
+
+//Changing nav links to green
+navLinks.forEach((greenColor) =>{
+  return greenColor.style.color ='green'
+})
