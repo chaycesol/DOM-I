@@ -112,3 +112,28 @@ contactText[2].textContent = "sales@greatidea.io"
 const footerText = document.querySelector('footer p');
 // console.log(footerText);
 footerText.textContent = "Copyright Great Idea! 2018"
+
+
+//ADD NEW CONTENT
+
+
+
+// adding link using append
+const nav = document.querySelector('header nav')
+const newBlogLink = document.createElement('a')
+// console.log(newBlogLink)
+newBlogLink.textContent = 'Blog'
+newBlogLink.href = "www.medium.com/cheehayce"
+nav.appendChild(newBlogLink);
+
+//adding link using prepend
+const newPrependLink = document.createElement('a')
+console.log(newPrependLink)
+newPrependLink.textContent = 'Home'
+newPrependLink.href= "www.youtube.com"
+nav.prepend(newPrependLink);
+
+//Changing nav links to green
+navLinks.forEach((greenColor) =>{
+  return greenColor.style.color ='green'
+})
